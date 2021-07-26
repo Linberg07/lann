@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+@font-face {
+	font-family: 'Akzidenz';
+	src: url('../fonts/AkzidenzGroteskBQ-Bold.eot');
+	src: local('☺'), url('../fonts/AkzidenzGroteskBQ-Bold.woff') format('woff'), url('fonts/AkzidenzGroteskBQ-Bold.ttf') format('truetype'), url('fonts/AkzidenzGroteskBQ-Bold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Bebas';
+	src: url('../fonts/BebasNeue Regular.eot');
+	src: local('☺'), url('../fonts/BebasNeue Regular.woff') format('woff'), url('fonts/BebasNeue Regular.ttf') format('truetype'), url('fonts/BebasNeue Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+:root{
+	--mw : 870px;
+}
+
+body{
+	padding:0;
+	margin:0;
+	font-family: 'PT Sans';
+}
+.lock{
+	overflow: hidden;
+}
+ul{
+	list-style: none;
+	padding-inline-start: 0px;
+}
+a{
+	text-decoration: none;
+}
+.container{
+	max-width: var(--mw);
+	margin:0 auto;
+}
+@media (max-width: 992.98px){
+	.container{
+		max-width: 750px;
+	}
+}
+@media (max-width: 767.98px){
+	.container{
+		max-width: none;padding:0 10px;
+	}
+}
+@media (max-width: 479.98px){
+
+}
+header{padding:29px 0px 33px 0px;background-color: #fff}
+.header-top {
+	display: flex;
+	justify-content: space-between;
+
+	
+}
+@media (max-width: 767.98px){
+	.header-top{
+		justify-content: flex-end;
+
+
+	}
+}
+.header-top__lang {
+	display: flex;
+}
+.header-top__lang_item {
+	display: block;
+	line-height: 19px;
+	color:#000;
+	font-size: 13px;
+	text-transform: uppercase;
+	font-family: 'Bebas';
+	letter-spacing: 1px;
+	padding:0px 4px;
+	margin:0px 10px 0px 0px;
+}
+.active{
+	background-color: #000;
+	color:#fff;
+}
+.header-top__link {
+	font-size: 11px;
+	color:#000;
+	font-family: 'Akzidenz';
+	text-transform: uppercase;
+	text-decoration: underline;
+	position: relative;
+	z-index: 11;
+
+}
+@media(max-width: 767.98px){
+	.header-top__link{
+		margin-bottom: 5px;
+	}
+}
+@media (max-width: 420px){
+	.header-top__link{
+		font-size: 9px;
+	}
+}
+.header-bottom {
+	display: flex;
+	align-items: center;
+	margin:-20px 0px 0px 0px;
+
+}
+.header-bottom__column {
+	flex:0 0 33.333%;
+}
+.header-bottom__menu {}
+.header-bottom__menu--right.header-bottom__menu-list{
+
+justify-content: flex-end;
+}
+.header-bottom__menu-list {
+	display: flex;
+}
+
+.header-bottom__menu-list>li{
+	margin:0px 40px 0px 0px;
+}
+.header-bottom__menu-list>li:last-child{
+	margin:0px 0px 0px 0px;
+}
+@media (max-width: 992.98px){
+	.header-bottom__menu-list>li{
+	margin:0px 20px 0px 0px;
+}
+}
+
+.header-bottom__menu_link {
+	font-family: 'Akzidenz';
+	color:#000;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	font-size: 11px;
+}
+.header-logo {
+	display: block;
+	text-align: center;
+	position: relative;
+	z-index: 11;
+}
+
+.header-logo__text {
+	display: block;
+	color:#000;
+	font-family: 'Bebas';
+	font-size: 8px;
+	text-transform: uppercase;
+	letter-spacing: 8px;
+
+}
+.header-logo__image {
+	display: inline-block;
+	margin:13px 0px 18px 0px;
+
+}
+@media (max-width: 767.98px){
+	.header-logo__image{
+		margin:3px 0px 0px 0px;
+	}
+	.header-logo__image>img{
+		width: 150px;
+	}
+	.header__logo{
+		width: 100%;
+	}
+	.header-bottom{
+		width: 100%;
+	}
+}
+@media (max-width: 380px){
+	.header-logo__image>img{
+		width: 100px;
+	}
+	.header-logo__text{
+		letter-spacing: 4px;
+	}
+}
+.header-menu__icon{
+	display: none;
+}
+@media (max-width: 767.98px){
+.header-menu__icon{
+	display: block;
+	position: absolute;
+	top:29px;
+	left:10px;
+	width: 30px;
+	height: 18px;
+	cursor: pointer;
+	z-index: 11;
+
+}
+.header-menu__icon>span{
+	position: absolute;
+	top:8px;
+	left:0px;
+	width: 100%;
+	height: 2px;
+	background-color: #000;
+}
+.header-menu__icon>span:first-child{
+	top:0px;
+}
+.header-menu__icon>span:last-child{
+	top:auto;
+	bottom:0px;
+}
+.activ>span:first-child{
+	transform: rotate(-45deg);
+	top:8px;
+	
+}
+.activ>span:last-child{
+	transform: rotate(45deg);
+	bottom:8px;
+	
+}
+.activ>span:nth-child(2){
+	display: none;
+}
+.header-menu{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	left:-120%;
+	top:0;
+	background-color: #fff;
+	z-index: 10;
+	padding:60px 0px 0px 0px;
+
+	transition: 0.3s;
+}
+.header-menu.activ{
+	left:0;
+	text-align: center;
+}
+.header-top__lang{
+margin-top: 70px;
+width: 100%;
+justify-content: center;
+}
+.header-bottom__menu-list{
+	display: block;
+	margin:0;
+}
+.header-bottom__menu-list>li{
+	margin:15px 0px 15px 0px;
+}
+}
